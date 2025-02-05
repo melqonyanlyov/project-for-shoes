@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: rgba(34, 34, 34, 1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-search-cancel-button {
+    cursor: pointer;
+    transition: 0.5s;
+    translate: -10px;
+}
+
+header a {
+    display: inline-block;
+}
+
+header a .logo {
+    height: 85px;
+    transition: 0.7s;
+}
+header a .logo:hover {
+    rotate: 360deg;
+}
+
+
+.dot {
+    appearance: none;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow:  0 2px 5px #000;
+    transition: background 0.2s, translate 0.2s;
+}
+.dot:checked {
+    background: #0f0;
+    box-shadow:  0 2px 5px #000, inset 0 0 8px #000;
+    translate: 0 -6px;
+}
+
+.slideBtn {
+    animation: repeatBtn 1s infinite;
+}
+.slideBtn.prev {
+    --prevNext: -15px;
+}
+.slideBtn.next {
+    --prevNext: 15px;
+}
+
+@keyframes repeatBtn {
+    50% {
+        translate: var(--prevNext) -50%;
+    }
+}
+
+.cursor {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #ff0;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px #ff0, 0 0 30px #ff0;
+    z-index: 50;
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ff0;
+    border-radius: 50%;
+    animation: mouse 0.5s infinite;
+}
+
+@keyframes mouse {
+    50% {
+        translate: -50px;
+    }
+}
+
+.add {
+    --x: 0;
+    --y: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.add::after {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 0;
+    height: 0;
+    background: #fa0;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: inset 0 0 30px #0009, 0 0 30px #000;
+    transition: width 0.7s, height 0.7s;
+}
+.add:hover::after {
+    width: 16rem;
+    height: 16rem;
+}
+
+.lineScroll::-webkit-scrollbar {
+    width: 8px;
+    background: #fff;
+}
+.lineScroll::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+}
+
+.logPwdInp::placeholder {
+        transition: 0.4s;
+}
+.changeLangInp::placeholder {
+    translate: 0 -30px;
+}
