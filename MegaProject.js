@@ -223,12 +223,12 @@ const globalData = Object.freeze({
 
     href: ['MegaProject.html', '#', '#', '#' ,'#'],
     slider: [
-        '../Mega Project/sliderImg/1.jpg',
-        '../Mega Project/sliderImg/2.jpg',
-        '../Mega Project/sliderImg/3.jpg',
-        '../Mega Project/sliderImg/4.jpg',
-        '../Mega Project/sliderImg/5.jpg',
-        '../Mega Project/sliderImg/1.jpg',
+        '../project-for-shoes/sliderImg/1.jpg',
+        '../project-for-shoes/sliderImg/2.jpg',
+        '../project-for-shoes/sliderImg/3.jpg',
+        '../project-for-shoes/sliderImg/4.jpg',
+        '../project-for-shoes/sliderImg/5.jpg',
+        '../project-for-shoes/sliderImg/1.jpg',
     ],
 
     productImage: [
