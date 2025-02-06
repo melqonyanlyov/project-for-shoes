@@ -613,7 +613,7 @@ signBtnBlock.lastElementChild.onclick = () => {
         globalData.data.alertVariant = 0;
         return; // sa grvum e vorpeszi ete bavararum e araj chgna ev mnacacy chkatari 
     }
-    if(inp[1].value.length < 6 || inp[2].value.length < 6 || inp[3].value.length < 6 || inp[4   ].value.length < 6) {
+    if(inp[1].value.length < 6 || inp[2].value.length < 6 || inp[3].value.length < 6 || inp[4       ].value.length < 6) {
         newAlertBlock.style.clipPath = `circle(100%)`;
         newAlertInfo.innerText = globalData.language[globalData.data.langIndex].sign.symbol;
         globalData.data.alertVariant = 1;
